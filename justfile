@@ -7,7 +7,7 @@ serve:
 	cd pkg/www && npm run start
 
 test:
-	cargo test
+	wasm-pack test --chrome --headless
 
 clippy:
   cargo clippy --all-targets --all-features
@@ -30,6 +30,3 @@ check:
 
 watch +COMMAND='test':
 	cargo watch --clear --exec "{{COMMAND}}"
-
-usage:
-	cargo run -- --help | pbcopy

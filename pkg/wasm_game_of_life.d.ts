@@ -37,4 +37,12 @@ export class Universe {
 * @returns {number}
 */
   cells(): number;
+/**
+* @param {number} width
+*/
+  set_width(width: number): void;
+/**
+* @param {number} height
+*/
+  set_height(height: number): void;
 }

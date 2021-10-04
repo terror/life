@@ -165,6 +165,18 @@ export class Universe {
         var ret = wasm.universe_cells(this.ptr);
         return ret;
     }
+    /**
+    * @param {number} width
+    */
+    set_width(width) {
+        wasm.universe_set_width(this.ptr, width);
+    }
+    /**
+    * @param {number} height
+    */
+    set_height(height) {
+        wasm.universe_set_height(this.ptr, height);
+    }
 }
 
 export function __wbg_alert_fbbeabc2309f67cb(arg0, arg1) {
