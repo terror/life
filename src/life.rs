@@ -109,6 +109,7 @@ impl Universe {
         )] as u8;
       }
     }
+
     count
   }
 }
