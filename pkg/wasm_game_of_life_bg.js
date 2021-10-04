@@ -91,6 +91,7 @@ export function greet(name) {
     wasm.greet(ptr0, len0);
 }
 
+function notDefined(what) { return () => { throw new Error(`${what} is not defined`); }; }
 /**
 */
 export const Cell = Object.freeze({ Dead:0,"0":"Dead",Alive:1,"1":"Alive", });
@@ -169,6 +170,8 @@ export class Universe {
 export function __wbg_alert_fbbeabc2309f67cb(arg0, arg1) {
     alert(getStringFromWasm0(arg0, arg1));
 };
+
+export const __wbg_random_a582babfa4489c72 = typeof Math.random == 'function' ? Math.random : notDefined('Math.random');
 
 export function __wbindgen_throw(arg0, arg1) {
     throw new Error(getStringFromWasm0(arg0, arg1));
